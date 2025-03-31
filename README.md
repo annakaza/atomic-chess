@@ -8,9 +8,9 @@ A Python implementation of Atomic Chess - a variant of standard chess where all 
 
 Atomic Chess modifies the rules of classical chess by adding explosions:
 
-- When a piece is captured, all adjacent **non-pawn** pieces, including the capturing piece, are also removed from the board.
-- **Pawns** are only removed if directly captured.
-- **Kings** cannot capture and cannot be destroyed in a mutual explosion.
+- When a piece is captured, all adjacent non-pawn pieces, including the capturing piece, are also removed from the board.
+- Pawns are only removed if directly captured.
+- Kings cannot capture and are immune to mutual destructionn.
 - The game ends when a king is destroyed by an explosion.
 
 ---
@@ -18,12 +18,26 @@ Atomic Chess modifies the rules of classical chess by adding explosions:
 ## Features
 
 - Full 8x8 chessboard setup and display
-- Class-based design for all piece types
-- Piece-specific move validation
+- Class-based implementation for all piece types
+- Piece-specific movement and validation logic
 - Algebraic notation input (e.g., `e2`, `g5`)
 - Explosions remove surrounding non-pawn pieces after a capture
 - Win detection when a king is destroyed
 - Interactive terminal-based gameplay with real-time board rendering
+
+This project demonstrates the following concepts:
+- Object-oriented design with class inheritance
+- Chess logic and state tracking
+- Move validation with conditional logic
+- Explosion mechanics and adjacency checks
+- Input handling via algebraic notation parsing
+
+---
+
+## Project Structure
+
+- `ChessVar.py` — main game logic, including piece classes and board management
+- `main.py` — command-line interface for playing the game
 
 ---
 
@@ -36,7 +50,7 @@ Atomic Chess modifies the rules of classical chess by adding explosions:
 python main.py
 ```
 
-3. Enter moves in algebraic notation:
+3. Enter moves using standard chess notation:
 
 ```
 Move from: e2
@@ -44,33 +58,18 @@ Move to: e4
 ```
 
 - White goes first
-- The game ends when a king is exploded
+- The game ends when a king is destroyed in an explosion
 
 ---
 
-## Project Structure
+## Starting Board Layout
 
-- `ChessVar.py` — main game logic, including piece classes and board management
-- `main.py` — simple terminal interface for interactive play
-
----
-
-## Concepts Demonstrated
-
-- Object-oriented design with class inheritance
-- Game state management
-- Move validation and board representation
-- Explosion mechanics and conditional logic
-- String parsing for algebraic notation
+![chessboard](starting_position.png "starting position")
 
 ---
 
 ## Author
 
-Created by Anna Kaza
+Developed by Anna Kaza
 
----
-
-## Board Layout (Algebraic Notation)
-
-![chessboard](starting_position.png "starting position")
+Connect with me at annakaza06@gmail.com or www.linkedin.com/in/anna-kaza
